@@ -1,0 +1,7 @@
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_LogicLoops\Strawter_Alexandria_LogicLoops\bin\Debug\Strawter_Alexandria_LogicLoops.exe.config
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_LogicLoops\Strawter_Alexandria_LogicLoops\bin\Debug\Strawter_Alexandria_LogicLoops.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_LogicLoops\Strawter_Alexandria_LogicLoops\bin\Debug\Strawter_Alexandria_LogicLoops.pdb
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_LogicLoops\Strawter_Alexandria_LogicLoops\obj\Debug\Strawter_Alexandria_LogicLoops.csprojAssemblyReference.cache
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_LogicLoops\Strawter_Alexandria_LogicLoops\obj\Debug\Strawter_Alexandria_LogicLoops.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_LogicLoops\Strawter_Alexandria_LogicLoops\obj\Debug\Strawter_Alexandria_LogicLoops.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_LogicLoops\Strawter_Alexandria_LogicLoops\obj\Debug\Strawter_Alexandria_LogicLoops.pdb

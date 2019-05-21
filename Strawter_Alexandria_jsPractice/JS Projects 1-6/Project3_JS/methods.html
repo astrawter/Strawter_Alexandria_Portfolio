@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Methods</title>
+    <script type="text/javascript" src="methods.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Methods</h1>
+      <section>
+        <h2>Currency Convertor</h2>
+        <p>How many Euros would you like to convert to USD?</p>
+        <label for="euro">Amount in Euro &euro;</label>
+        <input type="number" id="euro" name="euro" value="0.00" step=".01">
+        <button type="button" name="button" onclick="convert()">Convert</button>
+        <h3>Conversion</h3>
+        <p id="output"></p>
+      </section>
+      <section>
+        <h2>Astronomical</h2>
+        <p>Let's find out how much you woud weigh on different planets. First enter your weight and choose a planet.</p>
+        <div>
+          <label for="weight">Enter Weight:</label>
+          <input type="number" id="weight" name="weight" value="0">
+        </div>
+        <div>
+          <label for="planet">Choose Planet:</label>
+          <select id="planet" name="planet">
+            <option value="1">1. Mercury</option>
+            <option value="2">2. Venus</option>
+            <option value="3">3. Earth</option>
+            <option value="4">4. Mars</option>
+            <option value="5">5. Jupiter</option>
+            <option value="6">6. Saturn</option>
+            <option value="7">7. Uranus</option>
+            <option value="8">8. Neptune</option>
+          </select>
+        </div>
+        <button type="button" name="button" onclick="weight()">Weight</button>
+        <h3>Weight</h3>
+        <p id="output2"></p>
+      </section>
+      <section>
+        <h2>Subtraction of Arrays</h2>
+        <p>
+          The following arrays will be subtracted: <br>
+          [4, 65, 32, 42, 12] and [1, 2, 5, 6, 9]<br>
+
+        [54, 125, 96, 72, 45, 67] and [ 7, 122, 145, 65, 3, 800]<br>
+
+        [10, 9, 8, 7] and [1, 2, 3, 4]</p>
+        <button type="button" name="button" onclick="addArr()">Subtract</button>
+        <h3>Results</h3>
+        <p id="output3"></p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Logic & Loops</title>
+    <script src="logicloops.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Logic & Loops</h1>
+      <section>
+        <h2>Making The Grade</h2>
+        <p>Let's check to see if your grades are passing.</p>
+        <label for="grade1">First Grade</label>
+        <input type="number" id="grade1" name="grade1" min="0" max="100" value="0">
+        <label for="grade2">Second Grade</label>
+        <input type="number" id="grade2" name="grade2" min="0" max="100" value="0">
+        <button type="button" name="button" onclick="getGrades()">Pass or Fail?</button>
+        <h3>Grade Analysis</h3>
+        <p id="gradeDisp"></p>
+      </section>
+
+      <section>
+        <h2>Brunch Bunch</h2>
+        <p>Find out how much it would cost you for brunch.</p>
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" value="0">
+        <button type="button" name="button" onclick="getBrunch()">Brunch Price</button>
+        <h3>Brunch Price</h3>
+        <p id="brunchDisp"></p>
+      </section>
+
+      <section>
+        <h2>Add Them Up</h2>
+        <p>Let's add up your collection of movies in the form of DVDs, Blu-Rays, and Ultraviolets.</p>
+        <div>
+          <label for="dvdNum">Number of DVDs</label>
+          <input type="number" id="dvdNum" name="dvdNum" value="0">
+        </div>
+        <div>
+          <label for="bluNum">Number of Blu-Rays</label>
+          <input type="number" id="bluNum" name="bluNum" value="0">
+        </div>
+        <div>
+          <label for="uvNum">Number of UltraViolets</label>
+          <input type="number" id="uvNum" name="uvNum" value="0">
+        </div>
+        <button type="button" name="button" onclick="getCollection()">Get Totals</button>
+        <h3>Collection Total</h3>
+        <p id="movieDisp"></p>
+      </section>
+
+      <section>
+        <h2>Cha-Ching!</h2>
+        <p>Below is the list of purchases made using the gift card.</p>
+        <label for="giftStart"></label>
+        <input type="number" id="giftStart" name="giftStart" value="0">
+        <button type="button" name="button" onclick="getBalance()">Get Balance</button>
+        <h3>Gift Card Balance</h3>
+        <p id="giftDisp"></p>
+      </section>
+    </main>
+  </body>
+</html>

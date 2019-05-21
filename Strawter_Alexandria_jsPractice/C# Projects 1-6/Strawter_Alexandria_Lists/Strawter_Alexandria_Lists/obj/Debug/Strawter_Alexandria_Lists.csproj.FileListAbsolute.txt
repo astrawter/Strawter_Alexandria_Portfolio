@@ -1,0 +1,14 @@
+//vmware-host/Shared Folders/Documents/Visual Studio 2017/SDI_Projects/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/bin/Debug/Strawter_Alexandria_Lists.exe.config
+//vmware-host/Shared Folders/Documents/Visual Studio 2017/SDI_Projects/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/bin/Debug/Strawter_Alexandria_Lists.exe
+//vmware-host/Shared Folders/Documents/Visual Studio 2017/SDI_Projects/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/bin/Debug/Strawter_Alexandria_Lists.pdb
+//vmware-host/Shared Folders/Documents/Visual Studio 2017/SDI_Projects/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/obj/Debug/Strawter_Alexandria_Lists.csprojAssemblyReference.cache
+//vmware-host/Shared Folders/Documents/Visual Studio 2017/SDI_Projects/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/obj/Debug/Strawter_Alexandria_Lists.csproj.CoreCompileInputs.cache
+//vmware-host/Shared Folders/Documents/Visual Studio 2017/SDI_Projects/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/obj/Debug/Strawter_Alexandria_Lists.exe
+//vmware-host/Shared Folders/Documents/Visual Studio 2017/SDI_Projects/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/obj/Debug/Strawter_Alexandria_Lists.pdb
+/Users/lexx/Desktop/School/Project & Portfolio 2/Week 2/Strawter_Alexandria_jsPractice/C# Projects 1-6/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/bin/Debug/Strawter_Alexandria_Lists.exe.config
+/Users/lexx/Desktop/School/Project & Portfolio 2/Week 2/Strawter_Alexandria_jsPractice/C# Projects 1-6/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/bin/Debug/Strawter_Alexandria_Lists.exe
+/Users/lexx/Desktop/School/Project & Portfolio 2/Week 2/Strawter_Alexandria_jsPractice/C# Projects 1-6/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/bin/Debug/Strawter_Alexandria_Lists.pdb
+/Users/lexx/Desktop/School/Project & Portfolio 2/Week 2/Strawter_Alexandria_jsPractice/C# Projects 1-6/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/obj/Debug/Strawter_Alexandria_Lists.csprojAssemblyReference.cache
+/Users/lexx/Desktop/School/Project & Portfolio 2/Week 2/Strawter_Alexandria_jsPractice/C# Projects 1-6/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/obj/Debug/Strawter_Alexandria_Lists.csproj.CoreCompileInputs.cache
+/Users/lexx/Desktop/School/Project & Portfolio 2/Week 2/Strawter_Alexandria_jsPractice/C# Projects 1-6/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/obj/Debug/Strawter_Alexandria_Lists.exe
+/Users/lexx/Desktop/School/Project & Portfolio 2/Week 2/Strawter_Alexandria_jsPractice/C# Projects 1-6/Strawter_Alexandria_Lists/Strawter_Alexandria_Lists/obj/Debug/Strawter_Alexandria_Lists.pdb

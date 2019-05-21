@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Conditionals Problems</title>
+    <script type="text/javascript" src="conditionals.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Conditionals Problems</h1>
+
+      <section>
+        <h2>Hit the Jackpot!</h2>
+        <p>Congratulations you have won the lottery!
+          We will now calculate how much your actual total winnings will be.
+          You have two options; the first option is a lump sum one-time payment.
+          If you do this you will only receive 85% of your winnings.
+          The second option is to take 20 annual payments but you take the full amount.
+          Enter the total amount of winnings and payment type. </p>
+          <label for="totalWin">Total Amount: $</label>
+          <input type="number" id="totalWin" name="totalWin" value="10000">
+          <label for="payment">Payment Type</label>
+          <select id="payment" name="payment">
+            <option value="A">Annual</option>
+            <option value="L">Lump Sum</option>
+          </select>
+          <button type="button" name="button" onclick="getWinnings()">Get Winnings</button>
+          <h3>Winning Information</h3>
+          <p id="winDisp"></p>
+          <hr>
+      </section>
+
+      <section>
+        <h2>Lets Make a Deal</h2>
+        <p>We will determine if it is cheaper to buy items in a bulk pack or individually with a coupon.</p>
+        <div>
+          <label for="bulkNum">Number of items in the bulk pack</label>
+          <input type="number" id="bulkNum" name="bulkNum" value="1">
+        </div>
+        <div>
+          <label for="bulkCost">Cost of bulk pack</label>
+          <input type="number" id="bulkCost" name="bulkCost" value="1">
+        </div>
+        <div>
+          <label for="indCost">Cost of the individual item</label>
+          <input type="number" id="indCost" name="indCost" value="1">
+        </div>
+        <div>
+          <label for="coupon">Coupon value</label>
+          <input type="number" id="coupon" name="coupon" value="1">
+        </div>
+        <button type="button" name="button" onclick="getCheaper()">Calculate</button>
+        <h3>Cheaper Option</h3>
+        <p id="cheapDisp"></p>
+        <hr>
+      </section>
+
+      <section>
+        <h2>Pumpkin Patch Pickers</h2>
+        <p>We will determine the cost of a pumpkin by its weight.</p>
+        <label for="pumpWeight">Pumpkin Weight</label>
+        <input type="number" id="pumpWeight" name="pumpWeight" value="1">
+        <button type="button" name="button" onclick="getPrice()">Get Price</button>
+        <h3>Pumpkin Price</h3>
+        <p id="priceDisp"></p>
+        <hr>
+      </section>
+
+      <section>
+        <h2>Loyalty Card</h2>
+        <p>We will calculate the total cost of two items that you will purchase and calculate a discount based on if you are a preferred customer or not.</p>
+        <div>
+          <label for="fPrice">Cost of 1st Item</label>
+          <input type="number" id="fPrice" name="fPrice" value="1">
+        </div>
+        <div>
+          <label for="sPrice">Cost of 2nd Item</label>
+          <input type="number" id="sPrice" name="sPrice" value="1">
+        </div>
+        <div>
+          <label for="member">Are you a Member?</label>
+          <input type="checkbox" id="member" name="member" value="true">
+        </div>
+        <button type="button" name="button" onclick="isMember()">Get Price</button>
+        <h3>Total Cost</h3>
+        <p id="totalDisp"></p>
+        <hr>
+      </section>
+    </main>
+  </body>
+</html>

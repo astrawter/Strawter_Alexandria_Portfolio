@@ -1,0 +1,7 @@
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_CustomClass\Strawter_Alexandria_CustomClass\bin\Debug\Strawter_Alexandria_CustomClass.exe.config
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_CustomClass\Strawter_Alexandria_CustomClass\bin\Debug\Strawter_Alexandria_CustomClass.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_CustomClass\Strawter_Alexandria_CustomClass\bin\Debug\Strawter_Alexandria_CustomClass.pdb
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_CustomClass\Strawter_Alexandria_CustomClass\obj\Debug\Strawter_Alexandria_CustomClass.csprojAssemblyReference.cache
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_CustomClass\Strawter_Alexandria_CustomClass\obj\Debug\Strawter_Alexandria_CustomClass.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_CustomClass\Strawter_Alexandria_CustomClass\obj\Debug\Strawter_Alexandria_CustomClass.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_CustomClass\Strawter_Alexandria_CustomClass\obj\Debug\Strawter_Alexandria_CustomClass.pdb

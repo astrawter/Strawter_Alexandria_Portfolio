@@ -1,0 +1,7 @@
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Methods\Strawter_Alexandria_Methods\bin\Debug\Strawter_Alexandria_Methods.exe.config
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Methods\Strawter_Alexandria_Methods\bin\Debug\Strawter_Alexandria_Methods.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Methods\Strawter_Alexandria_Methods\bin\Debug\Strawter_Alexandria_Methods.pdb
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Methods\Strawter_Alexandria_Methods\obj\Debug\Strawter_Alexandria_Methods.csprojAssemblyReference.cache
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Methods\Strawter_Alexandria_Methods\obj\Debug\Strawter_Alexandria_Methods.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Methods\Strawter_Alexandria_Methods\obj\Debug\Strawter_Alexandria_Methods.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Methods\Strawter_Alexandria_Methods\obj\Debug\Strawter_Alexandria_Methods.pdb

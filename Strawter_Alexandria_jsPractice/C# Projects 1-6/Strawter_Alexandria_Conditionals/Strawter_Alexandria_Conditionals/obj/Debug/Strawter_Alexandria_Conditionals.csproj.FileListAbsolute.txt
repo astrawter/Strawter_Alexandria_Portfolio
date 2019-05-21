@@ -1,0 +1,7 @@
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Conditionals\Strawter_Alexandria_Conditionals\obj\Debug\Strawter_Alexandria_Conditionals.csprojAssemblyReference.cache
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Conditionals\Strawter_Alexandria_Conditionals\obj\Debug\Strawter_Alexandria_Conditionals.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Conditionals\Strawter_Alexandria_Conditionals\bin\Debug\Strawter_Alexandria_Conditionals.exe.config
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Conditionals\Strawter_Alexandria_Conditionals\bin\Debug\Strawter_Alexandria_Conditionals.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Conditionals\Strawter_Alexandria_Conditionals\bin\Debug\Strawter_Alexandria_Conditionals.pdb
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Conditionals\Strawter_Alexandria_Conditionals\obj\Debug\Strawter_Alexandria_Conditionals.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2017\SDI_Projects\Strawter_Alexandria_Conditionals\Strawter_Alexandria_Conditionals\obj\Debug\Strawter_Alexandria_Conditionals.pdb
