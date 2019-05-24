@@ -6,6 +6,29 @@
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
+    <main>
+      <fieldset>
+        <div>
+          <label for="name">Character Name</label>
+          <input type="text" id="name" name="name" value="Enter Name">
+        </div>
+        <div>
+          <label for="classes">Choose a Class</label>
+          <select id="classes" name="classes" onChange="changeWeapon(this.value);">
+            <option disabled selected>Choose Class</option>
+            <option value="16">Barbarian</option>
+            <option value="14">Ranger</option>
+            <option value="10">Wizard</option>
+          </select>
+        </div>
+        <div>
+          <label for="weapon">Choose an Attack</label>
+          <select name="weapon" id="weapon">
+            <option value="" disabled selected>Select Weapon</option>
+          </select>
+        </div>
+      </fieldset>
 
+    </main>
   </body>
 </html>

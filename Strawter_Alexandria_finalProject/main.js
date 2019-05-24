@@ -1,5 +1,22 @@
-//JS ECMA 6 Class Structure
+//Populate Weapon based on class select
+var weps = {
+    16: [["Club", 4],["Quarterstaff", 6],["Halberd", 10],["Longsword", 8],["Greatsword", 12]],
+    14: [["Light Crossbow", 8],["Heavy Crossbow", 10],["Hand Crossbow", 6],["Shortbow", 6],["Longbow", 8]],
+    10: [["Fireball", 10],["Guiding Bolt", 12],["Frost Touch", 8],["Thorn Whip", 6],["Blood Burst", 8]]
+}
 
+    function changeWeapon(value) {
+        if (value.length == 0) document.getElementById("weapon").innerHTML = "<option></option>";
+        else {
+            var wepOptions = "";
+            for (wepName in weps[value]) {
+                wepOptions += "<option value = '"+ weps[value][wepName][1] +"'>" + weps[value][wepName][0] + "</option>";
+            }
+            document.getElementById("weapon").innerHTML = wepOptions;
+        }
+    }
+
+//JS ECMA 6 Class Structure
 /*CLASSES && SUBCLASSES*/
 class Player{
   constructor(name,classes,hp,mp,dmg) {
@@ -85,11 +102,17 @@ class Spells extends Weapons{
   }
 
   //Method Overriding
-  showAtt(){
+  showAtt(char){
     this._att = this.getAtt();
+    if (this._wName == "Blood Burst") {
+      var heal = Math.floor(this._att / 2);
+      char.hp += heal;
+      return super.showAtt() + "You cast " + this._wName + " and do " + this._att + " magic damage.\nYou have healed for "+ heal + " points!\n";
+    }
     return super.showAtt() + "You cast " + this._wName + " and do " + this._att + " magic damage.\n";
   }
 }
+
 let w = new Player("Terra","Wizard",10,2,0);
 let b = new Player("Burr","Barbarian",16,0,2);
 let rg = new Player("Robin","Ranger",14,0,0);
@@ -106,31 +129,33 @@ let r = new Range("Longbow", 8);
 console.log(r.showAtt());
 console.log(r);
 
-let s = new Spells("Fireball", 10);
-console.log(s.showAtt());
+let s = new Spells("Blood Burst", 8);
+console.log(s.showAtt(w));
 console.log(s);
+
+
 /*
 Melee Weapons
 --------------
-Club	4
-Quarterstaff 6
-Halberd 10
-Longsword 8
-Greatsword 12
+["Club", 4]
+["Quarterstaff", 6]
+["Halberd", 10]
+["Longsword", 8]
+["Greatsword", 12]
 
 Range Weapons
 -------------
-Light Crossbow 8
-Heavy Crossbow 10
-Hand Crossbow 6
-Shortbow 6
-Longbow 8
+["Light Crossbow", 8]
+["Heavy Crossbow", 10]
+["Hand Crossbow", 6]
+["Shortbow", 6]
+["Longbow", 8]
 
 Magic Spells
 ------------
-Fireball 10
-Guiding Bolt 12
-Frost Touch 8
-Thorn Whip 6
-Blood Burst 8 / Half added to hp
+["Fireball", 10]
+["Guiding Bolt", 12]
+["Frost Touch", 8]
+["Thorn Whip", 6]
+["Blood Burst", 8]
 */
