@@ -189,6 +189,24 @@ function createWep() {
  w.wName = wep.options[wep.selectedIndex].text;
  w.att = wep.value;
  console.log(w);
+ return w;
+}
+
+function makeAtt(){
+  if (boss === null) {
+    alert("Choose a new Enemy");
+  }else {
+    console.log(boss);
+    let weapon = createWep();
+    var sub = weapon.getAtt();
+    boss.hp -= sub;
+    console.log(boss);
+    if (boss.hp < 1) {
+      boss.hp = 0;
+      var win = "You have defeated the "+boss.name;
+      boss = null;
+    }
+  }
 }
 
 function showChar() {
@@ -199,16 +217,15 @@ function startFight() {
     document.getElementById("wepChoice").style.display = "block";
 }
 
-
+let boss = new Enemy();
 function spawnEnemy(value) {
-  let boss = new Enemy();
   boss.name = enemies[value][0];
   boss.hp = enemies[value][1];
   boss.att = enemies[value][2];
   boss.mod = enemies[value][3];
-  console.log(boss);
   return boss;
 }
+
 
 function showEnemy(value) {
   var out = document.getElementById("enemyBlock");
@@ -219,21 +236,8 @@ function showEnemy(value) {
   }else {
     out.innerHTML = '<img src="img/Manticore.jpg" id="2" alt="Manticore">';
   }
+  document.getElementById("btn").style.display = "inline-block";
 }
-//console.log(boss);
-// let w = new Character("Terra","Wizard",10,2,0);
-// let m = new Melee("Mace", 6);
-// console.log(m.showAtt());
-// console.log(m);
-//
-// let r = new Range("Longbow", 8);
-// console.log(r.showAtt());
-// console.log(r);
-//
-// let s = new Spells("Blood Burst", 8);
-// console.log(s.showAtt(w));
-// console.log(s);
-
 
 /*
 Melee Weapons
