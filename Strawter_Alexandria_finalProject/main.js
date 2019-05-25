@@ -1,20 +1,26 @@
 //Populate Weapon based on class select
 var weps = {
-    16: [["Club", 4],["Quarterstaff", 6],["Halberd", 10],["Longsword", 8],["Greatsword", 12]],
+    16: [["Club", 4],["Mace", 4],["Halberd", 10],["Longsword", 8],["Greatsword", 12]],
     14: [["Light Crossbow", 8],["Heavy Crossbow", 10],["Hand Crossbow", 6],["Shortbow", 6],["Longbow", 8]],
-    10: [["Fireball", 10],["Guiding Bolt", 12],["Frost Touch", 8],["Thorn Whip", 6],["Blood Burst", 8]]
+    10: [["Fireball", 10],["Guiding Bolt", 12],["Frost Touch", 8],["Thorn Whip", 6],["Blood Burst", 8], ["Quarterstaff", 6]]
 }
 
-    function changeWeapon(value) {
-        if (value.length == 0) document.getElementById("weapon").innerHTML = "<option></option>";
-        else {
-            var wepOptions = "";
-            for (wepName in weps[value]) {
-                wepOptions += "<option value = '"+ weps[value][wepName][1] +"'>" + weps[value][wepName][0] + "</option>";
-            }
-            document.getElementById("weapon").innerHTML = wepOptions;
+var enemies = {
+  1: ["Cockatrice", 13, 4, 1],
+  2: ["Werewolf", 15, 8, 2],
+  3: ["Manticore", 18, 8, 3]
+}
+
+function changeWeapon(value) {
+    if (value.length == 0) document.getElementById("weapon").innerHTML = "<option></option>";
+    else {
+        var wepOptions = "";
+        for (wepName in weps[value]) {
+            wepOptions += "<option value = '"+ weps[value][wepName][1] +"'>" + weps[value][wepName][0] + "</option>";
         }
+        document.getElementById("weapon").innerHTML = wepOptions;
     }
+}
 
 //JS ECMA 6 Class Structure
 /*CLASSES && SUBCLASSES*/
@@ -53,9 +59,29 @@ class Character{
 }
 
 //Class for enemies
-class Enemy extends Character{
-  constructor(name,classes,hp,mp,dmg) {
-    super(name,classes,hp,mp,dmg)
+class Enemy{
+  constructor(name,hp,att,mod) {
+    this._name = name;
+    this._hp = hp;
+    this._att = att;
+    this._mod = mod;
+  }
+
+  get name() {return this._name;}
+  set name(value) {this._name = value;}
+
+  get hp() {return this._hp;}
+  set hp(value) {this._hp = value;}
+
+  get att() {return this._att;}
+  set att(value) {this._att = value;}
+
+  get mod() {return this._mod;}
+  set mod(value) {this._mod = value;}
+
+  bossAtt(){
+    var damage = (Math.floor(Math.random() * this._att) + 1) + this._mod;
+    return damage;
   }
 }
 
@@ -125,8 +151,6 @@ class Spells extends Weapons{
   }
 }
 
-
-
 let c = new Character();
 let w;
 
@@ -147,7 +171,7 @@ function createChar() {
   }else {
     c.dmg = 0;
   }
-
+  console.log(c);
   return c;
 }
 
@@ -169,10 +193,34 @@ function createWep() {
 
 function showChar() {
   document.getElementById("charInfo").innerHTML = c.display();
-  document.getElementById("attackBtn").style.display = "block";
 }
 
-console.log(c);
+function startFight() {
+    document.getElementById("wepChoice").style.display = "block";
+}
+
+
+function spawnEnemy(value) {
+  let boss = new Enemy();
+  boss.name = enemies[value][0];
+  boss.hp = enemies[value][1];
+  boss.att = enemies[value][2];
+  boss.mod = enemies[value][3];
+  console.log(boss);
+  return boss;
+}
+
+function showEnemy(value) {
+  var out = document.getElementById("enemyBlock");
+  if (value == 1) {
+    out.innerHTML = '<img src="img/Cockatrice.jpg" id="1" alt="Cockatrice">';
+  }else if (value == 2 ) {
+    out.innerHTML = '<img src="img/Werewolf.jpg" id="3" alt="Werewolf">';
+  }else {
+    out.innerHTML = '<img src="img/Manticore.jpg" id="2" alt="Manticore">';
+  }
+}
+//console.log(boss);
 // let w = new Character("Terra","Wizard",10,2,0);
 // let m = new Melee("Mace", 6);
 // console.log(m.showAtt());

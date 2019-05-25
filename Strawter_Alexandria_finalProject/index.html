@@ -4,6 +4,22 @@
     <meta charset="utf-8">
     <title>Final Project</title>
     <script type="text/javascript" src="main.js"></script>
+    <style>
+    button {
+      background-color: #f44336;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 1em;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    #enemyBlock {
+        display: inline-block;
+    }
+    </style>
   </head>
   <body>
     <main>
@@ -11,6 +27,7 @@
 
 
       <fieldset style="width: 10%;">
+        <legend>Character Creation</legend>
         <div>
           <label for="name">Character Name</label>
           <input type="text" id="name" name="name" placeholder="Enter Name" required>
@@ -29,13 +46,31 @@
       </form>
       <button type="button" id="showChar" onclick="showChar()" style="display: none;">Show</button>
       <div id="charInfo"></div>
-      <div id="attackBtn" style="display:none;">
-        <label for="weapon">Choose an Attack</label>
-        <select name="weapon" id="weapon" required>
-          <option value="" disabled selected>Select Weapon</option>
+      <section>
+        <fieldset style="width: 10.4%;">
+          <legend>Enemies</legend>
+        <label for="enemy">Choose your enemy</label>
+        <select id="enemy" name="enemy" onChange="spawnEnemy(this.value); showEnemy(this.value);" required>
+          <option disabled value="" selected>Choose Enemy</option>
+          <option value="1">Cockatrice</option>
+          <option value="2">Werewolf</option>
+          <option value="3">Manticore</option>
         </select>
-        <button type="button" name="button"  onclick="createWep();"">Attack</button>
-      </div>
+        </fieldset>
+        <div id="enemyBlock"></div>
+        <button type="button" name="button">FIGHT</button>
+        <fieldset id="wepChoice" style="width: 10%; display:none;">
+          <legend>Weapon</legend>
+          <div id="attackBtn">
+            <label for="weapon">Choose an Attack</label>
+            <select name="weapon" id="weapon" required>
+              <option value="" disabled selected>Select Weapon</option>
+            </select>
+            <button type="button" name="button"  onclick="createWep();"">Attack</button>
+          </div>
+          </fieldset>
+
+      </section>
     </main>
   </body>
 </html>
