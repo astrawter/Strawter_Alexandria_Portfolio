@@ -128,6 +128,8 @@ class Spells extends Weapons{
 
 
 let c = new Character();
+let w;
+
 function createChar() {
 
   c.name = document.getElementById('name').value;
@@ -150,25 +152,39 @@ function createChar() {
 }
 
 function createWep() {
-  document.getElementById("showChar").style.display = "none";
+ var cN = document.getElementById('classes').value;
+ var wep = document.getElementById('weapon');
+ if (cN == 16) {
+   w = new Melee();
+ }else if(cN == 14){
+   w = new Range();
+ }else {
+   w = new Spells();
+ }
+
+ w.wName = wep.options[wep.selectedIndex].text;
+ w.att = wep.value;
+ console.log(w);
 }
+
 function showChar() {
   document.getElementById("charInfo").innerHTML = c.display();
+  document.getElementById("attackBtn").style.display = "block";
 }
 
 console.log(c);
-let w = new Character("Terra","Wizard",10,2,0);
-let m = new Melee("Mace", 6);
-console.log(m.showAtt());
-console.log(m);
-
-let r = new Range("Longbow", 8);
-console.log(r.showAtt());
-console.log(r);
-
-let s = new Spells("Blood Burst", 8);
-console.log(s.showAtt(w));
-console.log(s);
+// let w = new Character("Terra","Wizard",10,2,0);
+// let m = new Melee("Mace", 6);
+// console.log(m.showAtt());
+// console.log(m);
+//
+// let r = new Range("Longbow", 8);
+// console.log(r.showAtt());
+// console.log(r);
+//
+// let s = new Spells("Blood Burst", 8);
+// console.log(s.showAtt(w));
+// console.log(s);
 
 
 /*

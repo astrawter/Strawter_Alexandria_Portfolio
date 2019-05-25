@@ -7,31 +7,34 @@
   </head>
   <body>
     <main>
+      <form  onsubmit="showChar(); return false;">
+
+
       <fieldset style="width: 10%;">
         <div>
           <label for="name">Character Name</label>
-          <input type="text" id="name" name="name" value="Enter Name">
+          <input type="text" id="name" name="name" placeholder="Enter Name" required>
         </div>
         <div>
           <label for="classes">Choose a Class</label>
-          <select id="classes" name="classes" onChange="changeWeapon(this.value);">
-            <option disabled selected>Choose Class</option>
+          <select id="classes" name="classes" onChange="changeWeapon(this.value);" required>
+            <option disabled value="" selected>Choose Class</option>
             <option value="16">Barbarian</option>
             <option value="14">Ranger</option>
             <option value="10">Wizard</option>
           </select>
         </div>
-        <div>
-          <label for="weapon">Choose an Attack</label>
-          <select name="weapon" id="weapon">
-            <option value="" disabled selected>Select Weapon</option>
-          </select>
-        </div>
-        <button type="button" name="button" onclick="createChar(); createWep();">Create Character</button>
+        <input type="submit" value="Create Character" onclick="createChar();"></input>
       </fieldset>
+      </form>
       <button type="button" id="showChar" onclick="showChar()" style="display: none;">Show</button>
-      <div id="charInfo">
-
+      <div id="charInfo"></div>
+      <div id="attackBtn" style="display:none;">
+        <label for="weapon">Choose an Attack</label>
+        <select name="weapon" id="weapon" required>
+          <option value="" disabled selected>Select Weapon</option>
+        </select>
+        <button type="button" name="button"  onclick="createWep();"">Attack</button>
       </div>
     </main>
   </body>
