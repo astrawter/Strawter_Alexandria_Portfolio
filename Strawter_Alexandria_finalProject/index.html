@@ -7,7 +7,7 @@
   </head>
   <body>
     <main>
-      <fieldset>
+      <fieldset style="width: 10%;">
         <div>
           <label for="name">Character Name</label>
           <input type="text" id="name" name="name" value="Enter Name">
@@ -27,8 +27,12 @@
             <option value="" disabled selected>Select Weapon</option>
           </select>
         </div>
+        <button type="button" name="button" onclick="createChar(); createWep();">Create Character</button>
       </fieldset>
+      <button type="button" id="showChar" onclick="showChar()" style="display: none;">Show</button>
+      <div id="charInfo">
 
+      </div>
     </main>
   </body>
 </html>

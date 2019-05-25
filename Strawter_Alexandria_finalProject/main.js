@@ -18,7 +18,7 @@ var weps = {
 
 //JS ECMA 6 Class Structure
 /*CLASSES && SUBCLASSES*/
-class Player{
+class Character{
   constructor(name,classes,hp,mp,dmg) {
     this._name = name;
     this._classes = classes;
@@ -46,8 +46,20 @@ class Player{
     var rgD = Math.floor(Math.random() * 4) + 1;
     return rgD;
   }
+
+  display(){
+    return this._name + " the " + this._classes;
+  }
 }
 
+//Class for enemies
+class Enemy extends Character{
+  constructor(name,classes,hp,mp,dmg) {
+    super(name,classes,hp,mp,dmg)
+  }
+}
+
+//Parent Class for weapons
 class Weapons{
   constructor(wName,att){
     this._wName = wName;
@@ -113,14 +125,39 @@ class Spells extends Weapons{
   }
 }
 
-let w = new Player("Terra","Wizard",10,2,0);
-let b = new Player("Burr","Barbarian",16,0,2);
-let rg = new Player("Robin","Ranger",14,0,0);
-rg.dmg = rg.rangeDamage();
-console.log(w);
-console.log(b);
-console.log(rg);
 
+
+let c = new Character();
+function createChar() {
+
+  c.name = document.getElementById('name').value;
+  c.classes = document.getElementById('classes').options[document.getElementById('classes').selectedIndex].text;
+  c.hp = document.getElementById('classes').value;
+  if (c.hp == 10) {
+    c.mp = 2;
+  }else {
+    c.mp = 0;
+  }
+  if (c.hp == 16) {
+    c.dmg = 2;
+  }else if (c.hp == 14) {
+    c.dmg = c.rangeDamage();
+  }else {
+    c.dmg = 0;
+  }
+
+  return c;
+}
+
+function createWep() {
+  document.getElementById("showChar").style.display = "none";
+}
+function showChar() {
+  document.getElementById("charInfo").innerHTML = c.display();
+}
+
+console.log(c);
+let w = new Character("Terra","Wizard",10,2,0);
 let m = new Melee("Mace", 6);
 console.log(m.showAtt());
 console.log(m);
