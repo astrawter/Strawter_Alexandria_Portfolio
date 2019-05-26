@@ -1,8 +1,8 @@
 //Populate Weapon based on class select
 var weps = {
-    16: [["Club", 4],["Mace", 4],["Halberd", 10],["Longsword", 8],["Greatsword", 12]],
-    14: [["Light Crossbow", 8],["Heavy Crossbow", 10],["Hand Crossbow", 6],["Shortbow", 6],["Longbow", 8]],
-    10: [["Fireball", 10],["Guiding Bolt", 12],["Frost Touch", 8],["Thorn Whip", 6],["Blood Burst", 8], ["Quarterstaff", 6]]
+    16: [["Club", 4],["Mace", 4],["Halberd", 8],["Longsword", 8],["Greatsword", 6]],
+    14: [["Light Crossbow", 8],["Heavy Crossbow", 8],["Hand Crossbow", 6],["Shortbow", 6],["Longbow", 8]],
+    10: [["Guiding Bolt", 6],["Frost Touch", 8],["Thorn Whip", 6], ["Quarterstaff", 6]]
 }
 
 var enemies = {
@@ -25,12 +25,10 @@ function changeWeapon(value) {
 //JS ECMA 6 Class Structure
 /*CLASSES && SUBCLASSES*/
 class Character{
-  constructor(name,classes,hp,mp,dmg) {
+  constructor(name,classes,hp) {
     this._name = name;
     this._classes = classes;
     this._hp = hp;
-    this._mp = mp;
-    this._dmg = dmg;
   }
 
   get name() {return this._name;}
@@ -42,11 +40,6 @@ class Character{
   get hp() {return this._hp;}
   set hp(value) {this._hp = value;}
 
-  get mp() {return this._mp;}
-  set mp(value) {this._mp = value;}
-
-  get dmg() {return this._dmg;}
-  set dmg(value) {this._dmg = value;}
 
   rangeDamage(){
     var rgD = Math.floor(Math.random() * 4) + 1;
@@ -138,17 +131,6 @@ class Spells extends Weapons{
   constructor(wName, att) {
     super(wName, att);
   }
-
-  //Method Overriding
-  showAtt(char){
-    this._att = this.getAtt();
-    if (this._wName == "Blood Burst") {
-      var heal = Math.floor(this._att / 2);
-      char.hp += heal;
-      return super.showAtt() + "You cast " + this._wName + " and do " + this._att + " magic damage.\nYou have healed for "+ heal + " points!\n";
-    }
-    return super.showAtt() + "You cast " + this._wName + " and do " + this._att + " magic damage.\n";
-  }
 }
 
 let c = new Character();
@@ -159,18 +141,6 @@ function createChar() {
   c.name = document.getElementById('name').value;
   c.classes = document.getElementById('classes').options[document.getElementById('classes').selectedIndex].text;
   c.hp = document.getElementById('classes').value;
-  if (c.hp == 10) {
-    c.mp = 2;
-  }else {
-    c.mp = 0;
-  }
-  if (c.hp == 16) {
-    c.dmg = 2;
-  }else if (c.hp == 14) {
-    c.dmg = c.rangeDamage();
-  }else {
-    c.dmg = 0;
-  }
   console.log(c);
   return c;
 }
@@ -188,24 +158,32 @@ function createWep() {
 
  w.wName = wep.options[wep.selectedIndex].text;
  w.att = wep.value;
- console.log(w);
  return w;
 }
 
 function makeAtt(){
-  if (boss === null) {
+  var text;
+  if (boss.hp == 0) {
     alert("Choose a new Enemy");
   }else {
-    console.log(boss);
     let weapon = createWep();
     var sub = weapon.getAtt();
     boss.hp -= sub;
-    console.log(boss);
-    if (boss.hp < 1) {
-      boss.hp = 0;
-      var win = "You have defeated the "+boss.name;
-      boss = null;
+    var damage = boss.bossAtt();
+    c.hp -= damage;
+    text = "Make your next attack."
+    if (c.hp < 1) {
+      c.hp = 0;
+      text = "The "+boss.name+ " has killed you!";
+      document.getElementById("wepChoice").style.display = "none";
     }
+    else if (boss.hp < 1) {
+      boss.hp = 0;
+      text = "You have defeated the "+boss.name;
+      document.getElementById("wepChoice").style.display = "none";
+    }
+    alert("Your health: " + c.hp+ "\nEnemy health: "+ boss.hp);
+    alert(text);
   }
 }
 
@@ -215,6 +193,7 @@ function showChar() {
 
 function startFight() {
     document.getElementById("wepChoice").style.display = "block";
+    document.getElementById("btn").style.display = "none";
 }
 
 let boss = new Enemy();
@@ -236,7 +215,7 @@ function showEnemy(value) {
   }else {
     out.innerHTML = '<img src="img/Manticore.jpg" id="2" alt="Manticore">';
   }
-  document.getElementById("btn").style.display = "inline-block";
+  document.getElementById("btn").style.display = "block";
 }
 
 /*
