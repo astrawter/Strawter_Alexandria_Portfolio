@@ -15,6 +15,7 @@ function changeWeapon(value) {
     if (value.length == 0) document.getElementById("weapon").innerHTML = "<option></option>";
     else {
         var wepOptions = "";
+        //Data Control
         for (wepName in weps[value]) {
             wepOptions += "<option value = '"+ weps[value][wepName][1] +"'>" + weps[value][wepName][0] + "</option>";
         }
