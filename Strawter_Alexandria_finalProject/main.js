@@ -49,6 +49,12 @@ class Character{
   display(){
     return this._name + " the " + this._classes;
   }
+
+  toString(){
+    var arr = this._name + " "+this._classes+ " "+this._hp;
+    console.log(arr);
+    return arr;
+  }
 }
 
 //Class for enemies
@@ -137,11 +143,12 @@ let c = new Character();
 let w;
 
 function createChar() {
-
-  c.name = document.getElementById('name').value;
-  c.classes = document.getElementById('classes').options[document.getElementById('classes').selectedIndex].text;
-  c.hp = document.getElementById('classes').value;
-  console.log(c);
+  c.name = document.getElementById("name").value;
+  c.classes = document.getElementById("classes").options[document.getElementById('classes').selectedIndex].text;
+  c.hp = document.getElementById("classes").value;
+  saveChar();
+  document.getElementById("name").value= " ";
+  document.getElementById("classes").options.selectedIndex = 0;
   return c;
 }
 
@@ -218,6 +225,21 @@ function showEnemy(value) {
   document.getElementById("btn").style.display = "block";
 }
 
+//Local Storage
+function saveChar() {
+  window.localStorage.setItem('char', JSON.stringify(c.toString()));//JSON.stringify(c)
+}
+
+function loadChar(){
+JSON.parse(window.localStorage.getItem('char'));
+var info = JSON.parse(localStorage['char']).split(" ");
+console.log(info);
+
+document.getElementById('name').value = info[0];
+document.getElementById('classes').value = info[2];
+changeWeapon(info[2]);
+c.hp = info[2];
+}
 /*
 Melee Weapons
 --------------

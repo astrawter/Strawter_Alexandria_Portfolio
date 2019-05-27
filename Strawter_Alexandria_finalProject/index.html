@@ -23,9 +23,8 @@
   </head>
   <body>
     <main>
-      <form  onsubmit="showChar(); return false;">
-
-
+      <button type="button" id="load" onclick="loadChar()">Load</button>
+      <form id="create" onsubmit="showChar(); return false;">
       <fieldset style="width: 10%;">
         <legend>Character Creation</legend>
         <div>
@@ -42,9 +41,10 @@
           </select>
         </div>
         <input type="submit" value="Create Character" onclick="createChar();"></input>
+        <input type="reset" value="Clear"></input>
       </fieldset>
       </form>
-      <button type="button" id="showChar" onclick="showChar()" style="display: none;">Show</button>
+
       <h2 id="charInfo"></h2>
       <section>
         <fieldset style="width: 10.4%;">
